@@ -752,7 +752,7 @@ h3.tittle_agile_w3.two {
     font-size: 30px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding-top: 15%;
+    /*padding-top: 15%;*/
     font-weight: 300;
     text-align: center;
 }
