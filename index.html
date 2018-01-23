@@ -88,7 +88,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 text-md-left text-center mb-lg-0 mb-1">
                         <ul class="header-social d-inline-block">
-                            <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
+                            <li><a href="https://www.facebook.com/upskillvalley" target="_blank"><i class="icofont icofont-social-facebook"></i></a></li>
                             <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
                             <li><a href="#"><i class="icofont icofont-social-linkedin"></i></a></li>
                             <li><a href="#"><i class="icofont icofont-social-tumblr"></i></a></li>
@@ -129,14 +129,14 @@
                                     <li class="active">
                                         <a href="index.html">Home</a>
                                     </li>
-                                    <li><a href="index.html#about">About</a></li>
-                                    <li><a href="#">Courses <i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#courses">Courses <i class="fa fa-angle-down"></i></a>
                                         <ul>
-                                            <li><a href="index.html#courses">Python backend development</a></li>
-                                            <li><a href="index.html#courses">Python + Machine learning development</a></li>
+                                            <li><a href="courses.html">Python backend development</a></li>
+                                            <li><a href="courses.html">Python + Machine learning development</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="index.html#team">Team</a></li>
+                                    <li><a href="#team">Team</a></li>
                                     <li><a href="#contact-area">Contact</a></li>
                                 </ul>
                             </nav>
@@ -196,7 +196,7 @@
                 <h3 style="padding: 2%"><b>Get placed in the startups of Bangalore</b></h3>
                 <h2 class="test">Upskill Valley</h2>
                 <h3><b>100% placement after completion or we give your money back</b></h3>
-                <h4><a href="#apply" class="scroll">Apply Now<span></span></a></h4>
+                <h4><a href="#apply" class="scroll" style="font-size: 30px;font-weight: bold;">Apply Now<span></span></a></h4>
             </div>
         </div>
     </div>
@@ -599,11 +599,11 @@
                         <div class="get-in-touch">
                             <h3>Get in Touch</h3>
                             <p>Feel free to contact with us</p>
-                            <form action="#" method="post">
-                                <input type="text" name="your_name" class="form-control" id="name" placeholder="Your name" required>
-                                <input type="email" name="your_mail" class="form-control" id="email" placeholder="Email here" required>
-                                <textarea name="your_message" class="form-control" rows="1" placeholder="Type your message" required></textarea>
-                                <button type="submit" class="boxed-btn"> Submit</button>
+                            <form action="#" method="post" id="contact_form">
+                                <input type="text" name="form_name" class="form-control" id="name" placeholder="Your name" required>
+                                <input type="email" name="form_email" class="form-control" id="email" placeholder="Email here" required>
+                                <textarea name="form_message" class="form-control" rows="1" placeholder="Type your message" required></textarea>
+                                <button type="submit" class="boxed-btn" id="contact_submit"> Submit</button>
                             </form>
                         </div>
                     </div>
@@ -684,6 +684,23 @@
                     scrollTop: $(this.hash).offset().top
                 }, 1000);
             });
+
+        //Google form integration
+        var $form = $('#contact_form'),
+        url = 'https://script.google.com/macros/u/0/s/AKfycbzNCD00PvxU3GEw7rCaoCF1elByPUL2FZO5M3csJThX_L69sQ/exec'
+        $('#contact_submit').on('click', function(e) {
+          e.preventDefault();
+          var jqxhr = $.ajax({
+            url: url,
+            method: "GET",
+            dataType: "json",
+            data: $form.serializeObject()
+          }).success(
+            // do something
+            alert('Thank you! We have received your request.');
+          );
+        })        
+
         });
     </script>
 

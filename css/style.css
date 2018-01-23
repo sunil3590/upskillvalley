@@ -750,7 +750,7 @@ h3.tittle_agile_w3.two {
 /*-- //banner-bottom-icons --*/
 /*-- banner--*/
 .banner{
-	background:url('../images/new/banner.jpg') no-repeat 0px 0px;
+	background:url('../assets/img/homepage/slider/slider03.jpg') no-repeat 0px 0px;
 	background-size:cover;
 	min-height:750px;
 }
@@ -1926,7 +1926,7 @@ canvas.particles-js-canvas-el{
     letter-spacing: 0.2px;
 	}
 	.banner {
-    background: url(../images/new/banner.jpg) no-repeat -231px 0px;
+    background: url(../assets/img/homepage/slider/slider03.jpg) no-repeat -231px 0px;
     background-size: cover;
 	}
 	.about, .w3-edu-main, .gallery, .news, .team, .about, .w3-services {
@@ -2169,7 +2169,7 @@ canvas.particles-js-canvas-el{
     font-size: 2.3em;
 	}
 	.banner {
-    background: url(../images/new/banner.jpg) no-repeat -354px 0px;
+    background: url(../assets/img/homepage/slider/slider03.jpg) no-repeat -354px 0px;
     background-size: cover;
 	}
 	.banner {
@@ -2189,7 +2189,7 @@ canvas.particles-js-canvas-el{
 	}
 	.banner {
     min-height: 400px;
-    background: url(../images/new/banner.jpg) no-repeat 0px 0px;
+    background: url(../assets/img/homepage/slider/slider03.jpg) no-repeat 0px 0px;
     background-size: cover;
 	}
 	.w3-edu-head h3, .title-w3, .heading h3, .w3ls-heading h3, .w3-about-head h3, .gallery-w3-head h4, .w3-services-head h3 {
