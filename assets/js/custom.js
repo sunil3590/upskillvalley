@@ -253,7 +253,7 @@
             if (scroll < 900) {
                 stickSide.removeClass("fixedOnPlace");
             } else {
-                if(scroll > 4800)
+                if(scroll > 4350)
                 {
                     //Again fix it to the bottom
                     stickSide.removeClass("fixedOnPlace");

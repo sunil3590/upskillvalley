@@ -72,6 +72,12 @@
         });
     </script>
 
+    <style type="text/css">
+    #toTop{
+        display: none !important;
+    }
+    </style>
+
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -127,13 +133,13 @@
                             <nav class="text-right main-menu">
                                 <ul>
                                     <li class="active">
-                                        <a href="index.html">Home</a>
+                                        <a href="#">Home</a>
                                     </li>
                                     <li><a href="#about">About</a></li>
                                     <li><a href="#courses">Courses <i class="fa fa-angle-down"></i></a>
                                         <ul>
-                                            <li><a href="courses.html">Python backend development</a></li>
-                                            <li><a href="courses.html">Python + Machine learning development</a></li>
+                                            <li><a href="python-backend.html">Python backend development</a></li>
+                                            <li><a href="python-machine.html">Python + Machine learning development</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#team">Team</a></li>
@@ -169,8 +175,8 @@
                                             <li><a href="index.html#about">About</a></li>
                                             <li><a href="#">Courses <i class="fa fa-angle-down"></i></a>
                                                 <ul>
-                                                    <li><a href="index.html#courses">Python backend development</a></li>
-                                                    <li><a href="index.html#courses">Python + Machine learning development</a></li>
+                                                    <li><a href="python-backend.html">Python backend development</a></li>
+                                            <li><a href="python-machine.html">Python + Machine learning development</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="index.html#team">Team</a></li>
@@ -592,18 +598,17 @@
                                     <p>+91-9916778133</p>
                                 </li>
                             </ul>
-                            <a href="#" class="live-chat boxed-btn">Live Chat</a>
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-12">
                         <div class="get-in-touch">
                             <h3>Get in Touch</h3>
-                            <p>Feel free to contact with us</p>
+                            <p>Feel free to contact us</p>
                             <form action="#" method="post" id="contact_form">
                                 <input type="text" name="form_name" class="form-control" id="name" placeholder="Your name" required>
                                 <input type="email" name="form_email" class="form-control" id="email" placeholder="Email here" required>
                                 <textarea name="form_message" class="form-control" rows="1" placeholder="Type your message" required></textarea>
-                                <button type="submit" class="boxed-btn" id="contact_submit"> Submit</button>
+                                <button type="button" class="boxed-btn" id="contact_submit"> Submit</button>
                             </form>
                         </div>
                     </div>
@@ -689,7 +694,6 @@
         var $form = $('#contact_form'),
         url = 'https://script.google.com/macros/u/0/s/AKfycbzNCD00PvxU3GEw7rCaoCF1elByPUL2FZO5M3csJThX_L69sQ/exec'
         $('#contact_submit').on('click', function(e) {
-          e.preventDefault();
           var jqxhr = $.ajax({
             url: url,
             method: "GET",
@@ -720,7 +724,6 @@
             });
         });
     </script>
-    <a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
     <!-- //smooth scrolling -->
 
     <script src="assets/js/popper.min.js"></script>
