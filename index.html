@@ -153,7 +153,7 @@
                             <div class="header-right-bar">                            
                                 <ul>
                                     <li class="book-now-btn">
-                                        <a class="book-now apply" href="#" style="background-color:#ec1935;color:#fff;"><i class="fa fa-book"></i>Apply Now</a>
+                                        <a class="book-now apply" href="#apply" style="background-color:#ec1935;color:#fff;"><i class="fa fa-book"></i>Apply Now</a>
                                     </li>
                                 </ul>
                             </div>
@@ -170,16 +170,16 @@
                                     <nav class="mobile-menu-active" >
                                         <ul>
                                             <li class="active">
-                                                <a href="index.html">Home</a>
+                                                <a href="http://www.upskillvalley.com">Home</a>
                                             </li>
-                                            <li><a href="index.html#about">About</a></li>
-                                            <li><a href="#">Courses <i class="fa fa-angle-down"></i></a>
+                                            <li><a href="#about">About</a></li>
+                                            <li><a href="#courses">Courses <i class="fa fa-angle-down"></i></a>
                                                 <ul>
                                                     <li><a href="python-backend.html">Python backend development</a></li>
                                             <li><a href="python-machine.html">Python + Machine learning development</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="index.html#team">Team</a></li>
+                                            <li><a href="#team">Team</a></li>
                                             <li><a href="#contact-area">Contact</a></li>
                                         </ul>
                                     </nav>
@@ -314,7 +314,7 @@
                     <h3>Python + Machine Learning</h3>
                     <p>Learn Backend Development and Machine Learning using Python libraries. You will be working with Cloud technologies such as AWS EC2, DynamoDB, S3 Bucket. Build persistance using MongoDB and MySQL.</p>
                     <div class="more">
-                        <a href="#" data-toggle="modal" data-target="#pythonModal">read more</a>
+                        <a href="python-machine.html">read more</a>
                     </div>
                 </div>
                 <div class="col-md-4 news-grid1">
@@ -334,7 +334,7 @@
                     <h3>Python Backend Development</h3>
                     <p>Learn Python and become a full fledged Backend Developer. You will be working with Cloud technologies such as AWS EC2, DynamoDB, S3 Bucket. Build persistance using MongoDB and MySQL.</p>
                     <div class="more">
-                        <a href="#" data-toggle="modal" data-target="#pythonMLModal">read more</a>
+                        <a href="python-backend.html">read more</a>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -548,24 +548,24 @@
                 </div>
 
             </div>
-          <!--   <div class="col-md-6 w3-edu-online-form w3_mail_grids">
+            <div class="col-md-6 w3-edu-online-form w3_mail_grids">
                 <h3>Your details</h3>
-                <form action="#" method="post">
+                <form id="course_application">
                     <div class="w3_agile_mail_grid">
-                        <input type="text" placeholder="Your Name" required="">
-                        <input type="email" placeholder="Your Email" required="">
-                        <input type="tel" placeholder="Your Phone Number" required="">
-                        <select id="category1" required="">
-                            <option value="">Python + Machine Learning</option>
-                            <option value="">Python Backend Development</option>
+                        <input type="text" placeholder="Your Name" name="name">
+                        <input type="email" placeholder="Your Email" name="email">
+                        <input type="tel" placeholder="Your Phone Number" name="phone">
+                        <select id="category1" name="course">
+                            <option value="Python + Machine Learning">Python + Machine Learning</option>
+                            <option value="Python Backend Development">Python Backend Development</option>
                         </select>
 
-                        <textarea name="Message" placeholder="Your Message" required=""></textarea>
+                        <textarea placeholder="Your Message" name="message"></textarea>
                         <input type="submit" value="Send">
                     </div>
                 </form>
 
-            </div> -->
+            </div>
             <div class="clearfix"></div>
 
         </div>
@@ -604,11 +604,11 @@
                         <div class="get-in-touch">
                             <h3>Get in Touch</h3>
                             <p>Feel free to contact us</p>
-                            <form action="#" method="post" id="contact_form">
-                                <input type="text" name="form_name" class="form-control" id="name" placeholder="Your name" required>
-                                <input type="email" name="form_email" class="form-control" id="email" placeholder="Email here" required>
-                                <textarea name="form_message" class="form-control" rows="1" placeholder="Type your message" required></textarea>
-                                <button type="button" class="boxed-btn" id="contact_submit"> Submit</button>
+                            <form id="contact_form">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your name" required>
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Email here" required>
+                                <textarea name="message" class="form-control" rows="1" placeholder="Type your message" required></textarea>
+                                <button type="submit" class="boxed-btn" id="contact_submit"> Submit</button>
                             </form>
                         </div>
                     </div>
@@ -628,7 +628,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="text-center">
-                            <p>©2018 All Rights Reserved - Designed and Developed by iDeozymes</p>
+                            <p>©2018 All Rights Reserved - http://www.upskillvalley.com/</p>
                             <a href="#" class="scrollup"><i class="fa fa-arrow-up"></i></a>
                         </div>
                     </div>
@@ -761,6 +761,9 @@
                 });
             });
         </script>
+
+        <!-- Attach google spreadsheet linking -->
+        <script src='google-sheet.js'></script>
 
 </body>
 
